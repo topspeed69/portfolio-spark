@@ -39,14 +39,6 @@ const Contact = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-orange-500/15 rounded-full animate-spin-slow blur-2xl"></div>
       </div>
 
-      {/* Opportunity Flash Green Indicator */}
-      <div className="absolute top-8 right-8 z-20">
-        <div className="flex items-center gap-2 bg-gradient-to-r from-green-500/20 to-green-400/20 backdrop-blur-sm border border-green-500/40 rounded-full px-4 py-2">
-          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-          <span className="text-green-400 text-sm font-medium">Available for Opportunities</span>
-        </div>
-      </div>
-
       <div className="max-w-4xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-light text-white mb-6 animate-fade-in">
