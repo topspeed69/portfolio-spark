@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -19,6 +18,7 @@ interface Project {
   impact: string;
   techStack: string[];
   featured: boolean;
+  github?: string | null; // Add github property
 }
 
 interface ProjectGridProps {
@@ -133,9 +133,25 @@ const ProjectGrid = ({ projects, activeCategory }: ProjectGridProps) => {
             )}
 
             <div className="flex gap-2 mt-4">
-              <Button size="sm" variant="outline" className="flex-1 border-orange-500/50 text-orange-400 hover:bg-orange-500/10 text-xs">
-                <Github className="w-3 h-3 mr-1" />
-                Code
+              <Button
+                size="sm"
+                variant="outline"
+                className="flex-1 border-orange-500/50 text-orange-400 hover:bg-orange-500/10 text-xs"
+                asChild={!!project.github}
+                disabled={!project.github}
+                {...(project.github ? {} : { tabIndex: -1 })}
+              >
+                {project.github ? (
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">
+                    <Github className="w-3 h-3 mr-1" />
+                    Code
+                  </a>
+                ) : (
+                  <span className="flex items-center justify-center w-full h-full opacity-60">
+                    <Github className="w-3 h-3 mr-1" />
+                    Code
+                  </span>
+                )}
               </Button>
               <Button size="sm" className="flex-1 bg-orange-500/20 text-orange-400 hover:bg-orange-500/30 border border-orange-500/30 text-xs">
                 <ExternalLink className="w-3 h-3 mr-1" />

@@ -1,4 +1,3 @@
-
 export interface Project {
   id: number;
   title: string;
@@ -13,12 +12,13 @@ export interface Project {
   impact: string;
   techStack: string[];
   featured: boolean;
+  github?: string | null; // Added github field
 }
 
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Justice AI",
+    title: "Legal AI Assistant", // Renamed from Justice AI
     subtitle: "Legal Intelligence Platform",
     description: "Advanced AI models including InlegalBERT, T5, Gemma, and LLama trained on Indian legal corpus for document summarization, consultation, and contract generation.",
     longDescription: "Engineered comprehensive legal tech solutions featuring document summarization, interactive legal consultation, clause classification, and automated contract generation capabilities using state-of-the-art transformer models.",
@@ -29,11 +29,12 @@ export const projects: Project[] = [
     timeline: "6 months",
     impact: "95% accuracy in legal document classification",
     techStack: ["Python", "TensorFlow", "Transformers", "BERT", "Gemma", "LLama"],
-    featured: false
+    featured: false,
+    github: "https://github.com/topspeed69/Legal-AI-Assistant"
   },
   {
     id: 2,
-    title: "Autonomous Vehicle",
+    title: "Self Driving Car Prototype", // Renamed from Autonomous Vehicle
     subtitle: "Navigation System",
     description: "Monocular vision-based autonomous navigation without traditional distance sensors using OpenCV and deep neural networks.",
     longDescription: "Developed sophisticated real-time computer vision algorithms for object detection, path planning, and obstacle avoidance on Raspberry Pi 4 hardware.",
@@ -44,7 +45,8 @@ export const projects: Project[] = [
     timeline: "4 months",
     impact: "Real-time processing at 30 FPS",
     techStack: ["Python", "OpenCV", "Raspberry Pi", "Neural Networks", "TensorFlow"],
-    featured: false
+    featured: false,
+    github: null // No GitHub link, disables button
   },
   {
     id: 3,
@@ -59,11 +61,12 @@ export const projects: Project[] = [
     timeline: "3 months",
     impact: "70% storage reduction",
     techStack: ["C++", "CMake", "Compression Algorithms", "Git Protocol"],
-    featured: false
+    featured: false,
+    github: "https://github.com/topspeed69/VCS"
   },
   {
     id: 4,
-    title: "Social Media Dashboard",
+    title: "Social Media Admin Dashboard", // Renamed for clarity
     subtitle: "Full-Stack Management Platform",
     description: "Comprehensive administrative dashboard with CRUD operations, role-based access control, advanced database architecture, and analytics integration.",
     longDescription: "Built scalable full-stack architecture supporting comprehensive CRUD operations, role-based access control, optimized database management, and real-time analytics processing using modern web technologies.",
@@ -74,11 +77,12 @@ export const projects: Project[] = [
     timeline: "5 months",
     impact: "Manages 10K+ users efficiently",
     techStack: ["TypeScript", "MySQL", "Prisma ORM", "Node.js", "React", "Redis", "Data Pipeline"],
-    featured: false
+    featured: false,
+    github: "https://github.com/topspeed69/Social-Media-Admin-Dashboard"
   },
   {
     id: 5,
-    title: "IoT Monitoring",
+    title: "Home Monitoring System", // Renamed from IoT Monitoring
     subtitle: "Environmental System",
     description: "Real-time detection of hazardous gases, temperature, and humidity with automated alerts and cloud sync.",
     longDescription: "Engineered comprehensive IoT solution for safety-critical applications with automated alert systems, cloud data synchronization, and mobile notifications.",
@@ -89,7 +93,8 @@ export const projects: Project[] = [
     timeline: "2 months",
     impact: "24/7 environmental monitoring",
     techStack: ["Arduino", "ESP32", "C", "Cloud Services", "Mobile App"],
-    featured: false
+    featured: false,
+    github: null // No GitHub link, disables button
   }
 ];
 
