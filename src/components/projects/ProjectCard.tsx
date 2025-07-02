@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -14,7 +13,7 @@ interface Project {
   detailedInfo: string;
   image: string;
   tags: string[];
-  category: string;
+  category: string[];
   timeline: string;
   impact: string;
   techStack: string[];
@@ -45,10 +44,12 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
         
-        <div className="absolute top-4 left-4">
-          <Badge className="bg-gray-800/80 text-gray-300 border border-gray-600 px-2 py-1 text-xs backdrop-blur-sm">
-            {project.category}
-          </Badge>
+        <div className="absolute top-4 left-4 flex gap-1 flex-wrap">
+          {project.category.map((cat, i) => (
+            <Badge key={i} className="bg-gray-800/80 text-gray-300 border border-gray-600 px-2 py-1 text-xs backdrop-blur-sm">
+              {cat}
+            </Badge>
+          ))}
         </div>
 
         <div className="absolute bottom-4 left-4 right-4">

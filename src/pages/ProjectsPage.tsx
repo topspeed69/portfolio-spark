@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import { Zap, Code } from "lucide-react";
@@ -13,13 +12,7 @@ const ProjectsPage = () => {
 
   const filteredProjects = activeCategory === "All" 
     ? projects 
-    : projects.filter(project => {
-        // Show Social Media Dashboard in both Web and DBMS categories
-        if (project.title === "Social Media Dashboard") {
-          return activeCategory === "Web" || activeCategory === "DBMS";
-        }
-        return project.category === activeCategory;
-      });
+    : projects.filter(project => Array.isArray(project.category) && project.category.includes(activeCategory));
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">

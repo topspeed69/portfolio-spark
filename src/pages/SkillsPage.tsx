@@ -24,35 +24,35 @@ const SkillsPage = () => {
     { 
       name: "Python", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-      category: "Languages",
+      category: ["Languages"],
       proficiency: "Advanced",
       projects: ["Justice AI", "Autonomous Vehicle", "MLOps Pipeline"]
     },
     { 
       name: "C++", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
-      category: "Languages",
+      category: ["Languages"],
       proficiency: "Intermediate",
       projects: ["Version Control System", "Embedded Systems"]
     },
     { 
       name: "JavaScript", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-      category: "Languages",
+      category: ["Languages"],
       proficiency: "Intermediate",
       projects: ["Social Media Dashboard", "Web Applications"]
     },
     { 
       name: "TypeScript", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-      category: "Languages",
+      category: ["Languages"],
       proficiency: "Intermediate",
       projects: ["React Applications", "API Development"]
     },
     { 
       name: "C", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
-      category: "Languages",
+      category: ["Languages"],
       proficiency: "Intermediate",
       projects: ["Embedded Systems", "Hardware Programming"]
     },
@@ -61,42 +61,42 @@ const SkillsPage = () => {
     { 
       name: "TensorFlow", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
-      category: "AI/ML",
+      category: ["AI/ML"],
       proficiency: "Beginner",
       projects: ["Justice AI", "Autonomous Vehicle", "Neural Networks"]
     },
     { 
       name: "PyTorch", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg",
-      category: "AI/ML",
+      category: ["AI/ML"],
       proficiency: "Beginner",
       projects: ["Deep Learning Models", "Computer Vision"]
     },
     { 
       name: "OpenCV", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg",
-      category: "AI/ML",
+      category: ["AI/ML"],
       proficiency: "Beginner",
       projects: ["Autonomous Vehicle", "Computer Vision"]
     },
     { 
       name: "Scikit-learn", 
       logo: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg",
-      category: "AI/ML",
+      category: ["AI/ML"],
       proficiency: "Intermediate",
       projects: ["Machine Learning", "Data Analysis"]
     },
     { 
       name: "Pandas", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg",
-      category: "AI/ML",
+      category: ["AI/ML"],
       proficiency: "Advanced",
       projects: ["Data Processing", "ML Pipeline"]
     },
     { 
       name: "NumPy", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg",
-      category: "AI/ML",
+      category: ["AI/ML"],
       proficiency: "Advanced",
       projects: ["Scientific Computing", "ML Models"]
     },
@@ -105,35 +105,35 @@ const SkillsPage = () => {
     { 
       name: "React", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-      category: "Frontend",
+      category: ["Frontend"],
       proficiency: "Intermediate",
       projects: ["Social Media Dashboard", "Web Applications"]
     },
     { 
       name: "Next.js", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-      category: "Frontend",
+      category: ["Frontend"],
       proficiency: "Beginner",
       projects: ["Full-stack Applications"]
     },
     { 
       name: "Tailwind CSS", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-      category: "Frontend",
+      category: ["Frontend"],
       proficiency: "Intermediate",
       projects: ["Modern UI Design", "Responsive Layouts"]
     },
     { 
       name: "HTML5", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-      category: "Frontend",
+      category: ["Frontend"],
       proficiency: "Intermediate",
       projects: ["Web Development"]
     },
     { 
       name: "CSS3", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-      category: "Frontend",
+      category: ["Frontend"],
       proficiency: "Intermediate",
       projects: ["Styling & Animations"]
     },
@@ -142,21 +142,21 @@ const SkillsPage = () => {
     { 
       name: "Node.js", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-      category: "Backend",
+      category: ["Backend"],
       proficiency: "Beginner",
       projects: ["API Development", "Server Applications"]
     },
     { 
       name: "Express.js", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-      category: "Backend",
+      category: ["Backend"],
       proficiency: "Beginner",
       projects: ["REST APIs", "Web Services"]
     },
     { 
       name: "FastAPI", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
-      category: "Backend",
+      category: ["Backend"],
       proficiency: "Intermediate",
       projects: ["Python APIs", "ML Services"]
     },
@@ -165,28 +165,28 @@ const SkillsPage = () => {
     { 
       name: "MySQL", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-      category: "Database",
+      category: ["Database"],
       proficiency: "Intermediate",
       projects: ["Social Media Dashboard", "Data Storage"]
     },
     { 
       name: "PostgreSQL", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
-      category: "Database",
+      category: ["Database"],
       proficiency: "Intermediate",
       projects: ["Production Databases"]
     },
     { 
       name: "MongoDB", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-      category: "Database",
+      category: ["Database"],
       proficiency: "Intermediate",
       projects: ["NoSQL Applications"]
     },
     { 
       name: "Prisma ORM", 
       logo: "https://www.vectorlogo.zone/logos/prismaio/prismaio-icon.svg",
-      category: "Database",
+      category: ["Database"],
       proficiency: "Intermediate",
       projects: ["Database Management", "Type-safe Queries"]
     },
@@ -195,35 +195,35 @@ const SkillsPage = () => {
     { 
       name: "Docker", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-      category: "DevOps",
+      category: ["DevOps"],
       proficiency: "Intermediate",
       projects: ["MLOps Pipeline", "Containerization"]
     },
     { 
       name: "Git", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-      category: "Tools",
+      category: ["Tools"],
       proficiency: "Advanced",
       projects: ["Version Control", "Collaboration"]
     },
     { 
       name: "GitHub", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
-      category: "Tools",
+      category: ["Tools"],
       proficiency: "Advanced",
       projects: ["Code Repository", "CI/CD"]
     },
     { 
       name: "VS Code", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
-      category: "Tools",
+      category: ["Tools"],
       proficiency: "Advanced",
       projects: ["Development Environment"]
     },
     { 
       name: "CMake", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cmake/cmake-original.svg",
-      category: "Tools",
+      category: ["Tools"],
       proficiency: "Beginner",
       projects: ["C++ Build System"]
     },
@@ -232,21 +232,21 @@ const SkillsPage = () => {
     { 
       name: "Arduino", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg",
-      category: "Hardware",
+      category: ["Hardware"],
       proficiency: "Intermediate",
       projects: ["IoT Monitoring", "Embedded Systems"]
     },
     { 
       name: "Raspberry Pi", 
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg",
-      category: "Hardware",
+      category: ["Hardware"],
       proficiency: "Intermediate",
       projects: ["Autonomous Vehicle", "Edge Computing"]
     },
     { 
       name: "ESP32", 
       logo: "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/_images/esp32-devkitC-v4-front.jpg",
-      category: "Hardware",
+      category: ["Hardware"],
       proficiency: "Intermediate",
       projects: ["IoT Devices", "Wireless Communication"]
     }
@@ -257,13 +257,13 @@ const SkillsPage = () => {
     if (category.name === "All") {
       category.count = skills.length;
     } else {
-      category.count = skills.filter(skill => skill.category === category.name).length;
+      category.count = skills.filter(skill => skill.category.includes(category.name)).length;
     }
   });
 
   const filteredSkills = activeCategory === "All" 
     ? skills 
-    : skills.filter(skill => skill.category === activeCategory);
+    : skills.filter(skill => skill.category.includes(activeCategory));
 
   const getProficiencyColor = (proficiency: string) => {
     switch (proficiency) {
@@ -368,7 +368,7 @@ const SkillsPage = () => {
                     </Badge>
                     
                     <Badge className="bg-gray-800/50 text-gray-400 text-xs px-2 py-1 font-light border border-gray-700 block">
-                      {skill.category}
+                      {Array.isArray(skill.category) ? skill.category.join(', ') : skill.category}
                     </Badge>
                   </div>
 
@@ -402,52 +402,25 @@ const SkillsPage = () => {
               <div className="absolute inset-2 bg-black rounded-full"></div>
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl text-orange-400">∞</div>
             </div>
-            
-            {/* Future Tech Badges */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {["Quantum Computing", "Web3 & Blockchain", "AR/VR Development", "Edge AI", "5G Applications", "Biotechnology"].map((tech, index) => (
+          </div>
+
+          <div className="border-t border-gray-800/50 pt-8">
+            <h4 className="text-xl font-light text-white mb-4">Currently Exploring</h4>
+            <div className="flex flex-wrap justify-center gap-3">
+              {["Generative AI", "Vector Databases", "Microservices", "Cloud Native", "DevSecOps", "MLOps", "GraphQL", "Serverless", "Kubernetes", "Rust Programming", "WebAssembly", "JAMstack"].map((tag, index) => (
                 <Badge 
-                  key={tech}
+                  key={tag}
                   className={`
-                    bg-gradient-to-r from-gray-800/60 to-gray-900/60 text-gray-300 
-                    hover:from-orange-500/20 hover:to-pink-500/20 hover:text-white
-                    border border-gray-700 hover:border-orange-500/50 backdrop-blur-sm
-                    px-4 py-2 text-sm font-light
-                    transform hover:scale-105 transition-all duration-300
-                    animate-fade-in
+                    bg-orange-500/10 text-orange-400 border border-orange-500/30 
+                    hover:bg-orange-500/20 hover:text-orange-300
+                    px-3 py-1 text-xs font-medium rounded-full
+                    transition-all duration-300 animate-fade-in
                   `}
-                  style={{ animationDelay: `${index * 0.15}s` }}
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  {tech}
+                  {tag}
                 </Badge>
               ))}
-            </div>
-
-            {/* Relevant Tech Tags */}
-            <div className="border-t border-gray-800/50 pt-8">
-              <h4 className="text-xl font-light text-white mb-4">Currently Exploring</h4>
-              <div className="flex flex-wrap justify-center gap-3">
-                {["Generative AI", "Vector Databases", "Microservices", "Cloud Native", "DevSecOps", "MLOps", "GraphQL", "Serverless", "Kubernetes", "Rust Programming", "WebAssembly", "JAMstack"].map((tag, index) => (
-                  <Badge 
-                    key={tag}
-                    className={`
-                      bg-orange-500/10 text-orange-400 border border-orange-500/30 
-                      hover:bg-orange-500/20 hover:text-orange-300
-                      px-3 py-1 text-xs font-medium rounded-full
-                      transition-all duration-300 animate-fade-in
-                    `}
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-12 pt-8 border-t border-gray-800/50">
-              <p className="text-gray-500 text-sm font-light">
-                "The only way to make sense out of change is to plunge into it, move with it, and join the dance." - Alan Watts
-              </p>
             </div>
           </div>
         </div>

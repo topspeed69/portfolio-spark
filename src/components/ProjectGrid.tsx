@@ -13,7 +13,7 @@ interface Project {
   detailedInfo: string;
   image: string;
   tags: string[];
-  category: string;
+  category: string[];
   timeline: string;
   impact: string;
   techStack: string[];
@@ -29,9 +29,9 @@ interface ProjectGridProps {
 const ProjectGrid = ({ projects, activeCategory }: ProjectGridProps) => {
   const [expandedProjects, setExpandedProjects] = useState<Set<number>>(new Set());
 
-  const filteredProjects = activeCategory === "All" 
-    ? projects 
-    : projects.filter(project => project.category === activeCategory);
+  const filteredProjects = activeCategory === "All"
+    ? projects
+    : projects.filter(project => project.category.includes(activeCategory));
 
   const toggleExpanded = (projectId: number) => {
     const newExpanded = new Set(expandedProjects);
@@ -58,11 +58,12 @@ const ProjectGrid = ({ projects, activeCategory }: ProjectGridProps) => {
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-            
-            <div className="absolute top-4 left-4">
-              <Badge className="bg-gray-800/80 text-gray-300 border border-gray-600 px-2 py-1 text-xs backdrop-blur-sm">
-                {project.category}
-              </Badge>
+            <div className="absolute top-4 left-4 flex gap-1 flex-wrap">
+              {project.category.map((cat, i) => (
+                <Badge key={i} className="bg-gray-800/80 text-gray-300 border border-gray-600 px-2 py-1 text-xs backdrop-blur-sm">
+                  {cat}
+                </Badge>
+              ))}
             </div>
 
             <div className="absolute bottom-4 left-4 right-4">

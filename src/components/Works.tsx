@@ -1,8 +1,8 @@
-
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink, ChevronDown, ChevronUp } from "lucide-react";
+import { projects as allProjects } from "@/data/projectsData";
 
 const Works = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -10,52 +10,12 @@ const Works = () => {
 
   const filters = ["All", "AI/ML", "Hardware", "Web", "DBMS", "Systems"];
 
-  const projects = [
-    {
-      title: "Justice AI",
-      description: "Developed and trained AI models like InlegalBERT, T5, Gemma, LLama on Indian law for summarization, chat, clause classification, and contract generation.",
-      fullDescription: "Engineered comprehensive legal tech solutions featuring document summarization, interactive legal consultation, clause classification, and automated contract generation capabilities. The project involved training state-of-the-art transformer models specifically on Indian legal corpus, implementing advanced NLP techniques for legal document analysis, and creating an intuitive interface for legal professionals to interact with AI-powered legal assistance tools.",
-      image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=400&fit=crop",
-      tags: ["Natural Language Processing", "Transformers", "Legal Tech", "Machine Learning"],
-      category: "AI/ML"
-    },
-    {
-      title: "Social Media Dashboard",
-      description: "Comprehensive admin dashboard for social media platform management with CRUD operations, role-based access, and advanced database management.",
-      fullDescription: "Built a scalable administrative dashboard supporting full CRUD operations, role-based access control, analytics integration, and real-time user management. The system features advanced user analytics, content moderation tools, automated reporting systems, and seamless integration with multiple social media APIs. Implemented robust security measures including JWT authentication, rate limiting, comprehensive audit logging, and optimized database architecture with complex relationship management and query optimization.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop",
-      tags: ["React", "Node.js", "MySQL", "Database Design", "Authentication", "Web Development", "DBMS"],
-      category: "Web"
-    },
-    {
-      title: "Lightweight VCS",
-      description: "Developed a custom lightweight version control system with Huffman compression, lazy loading, and chunked file hashing for efficient storage.",
-      fullDescription: "Architected and implemented a high-performance version control system featuring advanced Huffman compression algorithms, intelligent lazy loading mechanisms, and optimized chunked file hashing for superior storage efficiency. The system includes comprehensive file integrity verification, distributed repository management, branching and merging capabilities, and a user-friendly command-line interface. Optimized for both small and large repositories with minimal memory footprint.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop",
-      tags: ["C++", "Data Compression", "File Systems", "Algorithms"],
-      category: "Systems"
-    },
-    {
-      title: "Self-Driving Car Prototype",
-      description: "Monocular vision-based autonomous vehicle prototype without distance sensors. Implemented real-time computer vision for navigation using OpenCV and neural networks.",
-      fullDescription: "Developed a sophisticated autonomous navigation system using only monocular vision input, eliminating the need for traditional distance sensors. The system implements advanced computer vision algorithms including object detection, lane recognition, traffic sign identification, and obstacle avoidance. Features real-time processing capabilities running on Raspberry Pi 4 hardware with custom-trained neural networks for accurate path planning and decision making in various driving scenarios.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop",
-      tags: ["Computer Vision", "Deep Learning", "Embedded Systems", "Real-time Processing"],
-      category: "AI/ML"
-    },
-    {
-      title: "Home Monitoring System",
-      description: "IoT system that monitors gaseous content (butane, CO, CO2, O2) for safety alerts, plus temperature and humidity monitoring with real-time notifications.",
-      fullDescription: "Engineered a comprehensive IoT-based environmental monitoring solution for real-time detection of hazardous gases including butane, carbon monoxide, carbon dioxide, and oxygen levels. The system features automated alert mechanisms, cloud data synchronization, mobile notifications, and historical data analysis. Includes temperature and humidity sensors with customizable thresholds, emergency shutdown capabilities, and integration with home automation systems for enhanced safety and convenience.",
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=400&fit=crop",
-      tags: ["IoT", "Sensor Integration", "Safety Systems", "Arduino"],
-      category: "Hardware"
-    }
-  ];
+  // Use the imported projects data
+  const projects = allProjects;
 
-  const filteredProjects = activeFilter === "All" 
-    ? projects.slice(0, 6) 
-    : projects.filter(project => project.category === activeFilter);
+  const filteredProjects = activeFilter === "All"
+    ? projects.slice(0, 6)
+    : projects.filter(project => project.category.includes(activeFilter));
 
   const toggleExpanded = (index: number) => {
     const newExpanded = new Set(expandedProjects);
@@ -134,7 +94,7 @@ const Works = () => {
                   {project.title}
                 </h3>
                 <p className="text-gray-400 mb-4 leading-relaxed font-light text-sm">
-                  {expandedProjects.has(index) ? project.fullDescription : project.description}
+                  {expandedProjects.has(index) ? project.longDescription : project.description}
                 </p>
                 
                 {/* Read More Button */}

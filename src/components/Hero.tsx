@@ -33,7 +33,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-2xl md:text-3xl text-gray-300 mb-8 font-light">
-            AI Engineer & Full-Stack Developer
+            AI and ML enthusiast
           </p>
           
           <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed font-light">
