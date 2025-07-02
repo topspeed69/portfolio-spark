@@ -118,7 +118,7 @@ const SkillsPage = () => {
     },
     { 
       name: "Tailwind CSS", 
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+      logo: "https://imgs.search.brave.com/UUUN2uz0KyJkcRM7D7V2mvANaHbsLEM8o3fTuHaD528/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yYXcu/Z2l0aHVidXNlcmNv/bnRlbnQuY29tL3Rh/bmRwZnVuL3NraWxs/LWljb25zL21haW4v/aWNvbnMvVGFpbHdp/bmRDU1MtRGFyay5z/dmc",
       category: ["Frontend"],
       proficiency: "Intermediate",
       projects: ["Modern UI Design", "Responsive Layouts"]
@@ -148,7 +148,7 @@ const SkillsPage = () => {
     },
     { 
       name: "Express.js", 
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+      logo: "https://logowik.com/content/uploads/images/express-js1720895493.logowik.com.webp",
       category: ["Backend"],
       proficiency: "Beginner",
       projects: ["REST APIs", "Web Services"]
@@ -185,7 +185,7 @@ const SkillsPage = () => {
     },
     { 
       name: "Prisma ORM", 
-      logo: "https://www.vectorlogo.zone/logos/prismaio/prismaio-icon.svg",
+      logo: "https://pbs.twimg.com/profile_images/1932745231159443456/7IaY-d3Z_400x400.jpg",
       category: ["Database"],
       proficiency: "Intermediate",
       projects: ["Database Management", "Type-safe Queries"]
@@ -208,7 +208,7 @@ const SkillsPage = () => {
     },
     { 
       name: "GitHub", 
-      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+      logo: "https://i.pinimg.com/originals/b5/1b/78/b51b78ecc9e5711274931774e433b5e6.png",
       category: ["Tools"],
       proficiency: "Advanced",
       projects: ["Code Repository", "CI/CD"]
@@ -245,7 +245,7 @@ const SkillsPage = () => {
     },
     { 
       name: "ESP32", 
-      logo: "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/_images/esp32-devkitC-v4-front.jpg",
+      logo: "https://jarvis.cx/tools/_next/image?url=https%3A%2F%2Ffiles.oaiusercontent.com%2Ffile-MjQmD88EVw3aNF2I7HQ0Hkyj%3Fse%3D2123-10-16T20%253A52%253A11Z%26sp%3Dr%26sv%3D2021-08-06%26sr%3Db%26rscc%3Dmax-age%253D31536000%252C%2520immutable%26rscd%3Dattachment%253B%2520filename%253DyB0xE3NR_400x400.jpg%26sig%3DNtSrKklJfRcWyluuZttEl97XIrVwb1AvaPSfMZfY2tU%253D&w=1080&q=75https://gourmet-technology-crypto.jp/wp-content/uploads/2018/10/logo.png.webp",
       category: ["Hardware"],
       proficiency: "Intermediate",
       projects: ["IoT Devices", "Wireless Communication"]
