@@ -407,7 +407,7 @@ const SkillsPage = () => {
           <div className="border-t border-gray-800/50 pt-8">
             <h4 className="text-xl font-light text-white mb-4">Currently Exploring</h4>
             <div className="flex flex-wrap justify-center gap-3">
-              {["Generative AI", "Vector Databases", "Microservices", "Cloud Native", "DevSecOps", "MLOps", "GraphQL", "Serverless", "Kubernetes", "Rust Programming", "WebAssembly", "JAMstack"].map((tag, index) => (
+              {["Generative AI", "Vector Databases", "Cloud Computing", "MLOps", "Kubernetes", "Rust Programming","Go Programming","Reinforcement Learning"].map((tag, index) => (
                 <Badge 
                   key={tag}
                   className={`

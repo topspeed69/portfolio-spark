@@ -118,13 +118,6 @@ const Contact = () => {
             </form>
           </div>
         </div>
-
-        {/* Bottom Section */}
-        <div className="mt-20 pt-8 border-t border-gray-800/30 text-center backdrop-blur-sm">
-          <p className="text-gray-400 font-light">
-            © 2024 Vinay Mendole. All rights reserved.
-          </p>
-        </div>
       </div>
     </section>
   );
