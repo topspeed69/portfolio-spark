@@ -1,4 +1,3 @@
-
 import { Heart, Code } from "lucide-react";
 
 const Footer = () => {
@@ -18,12 +17,12 @@ const Footer = () => {
               <Code className="w-4 h-4 text-orange-400" />
               <span className="text-sm">Built with passion and powered by innovation</span>
             </div>
-            
-            <p className="text-gray-300 text-sm max-w-2xl mx-auto leading-relaxed">
+
+            <p className="text-gray-300 text-sm max-w-2xl mx-auto leading-relaxed whitespace-pre-line">
               UI and basic structure crafted with the assistance of{" "}
-              <a 
-                href="https://lovable.dev" 
-                target="_blank" 
+              <a
+                href="https://lovable.dev"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-orange-400 hover:text-orange-300 transition-colors duration-300 font-medium"
               >

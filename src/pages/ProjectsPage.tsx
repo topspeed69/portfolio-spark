@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import CategoryFilter from "@/components/projects/CategoryFilter";
 import ProjectCard from "@/components/projects/ProjectCard";
-import Footer from "@/components/Footer";
 import { projects, categories } from "@/data/projectsData";
 
 const ProjectsPage = () => {
@@ -85,8 +84,6 @@ const ProjectsPage = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };
