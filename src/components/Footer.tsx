@@ -30,7 +30,7 @@ const Footer = () => {
                 Lovable AI
               </a>
               . Project concept, implementation, and completion by{" "}
-              <span className="text-white font-medium">Yash Vardhan Singh</span>.
+              <span className="text-white font-medium">Vinay Mendole</span>.
             </p>
           </div>
 
@@ -44,7 +44,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="pt-4">
             <p className="text-gray-500 text-xs">
-              © {new Date().getFullYear()} Yash Vardhan Singh. All rights reserved.
+              © {new Date().getFullYear()} Vinay Mendole. All rights reserved.
             </p>
           </div>
         </div>

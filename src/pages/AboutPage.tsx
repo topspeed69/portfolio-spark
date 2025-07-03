@@ -32,24 +32,19 @@ const AboutPage = () => {
 
   const timeline = [
     {
+      year: "2024 - Present",
+      title: "AI/ML Development",
+      description: "Specialized in artificial intelligence and machine learning development, creating innovative solutions and intelligent systems"
+    },
+    {
       year: "2024",
-      title: "Advanced AI Development",
-      description: "Specialized in developing legal AI systems and autonomous navigation solutions"
+      title: "Full-Stack & Systems Development",
+      description: "Dabbled in embedded systems, systems programming with C++, beginner web development, and database management systems"
     },
     {
       year: "2023",
-      title: "Full-Stack Development",
-      description: "Expanded expertise in web development and database management systems"
-    },
-    {
-      year: "2022",
-      title: "Systems Programming",
-      description: "Deep dive into C++ and systems-level programming with version control systems"
-    },
-    {
-      year: "2021",
       title: "Hardware & IoT",
-      description: "Started working with embedded systems, Arduino, and IoT applications"
+      description: "Started working with embedded systems, Arduino, and Internet of Things applications"
     }
   ];
 
