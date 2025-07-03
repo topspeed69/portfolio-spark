@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -17,6 +18,7 @@ interface Project {
   timeline: string;
   impact: string;
   techStack: string[];
+  github?: string | null;
 }
 
 interface ProjectCardProps {
@@ -29,6 +31,12 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
 
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded);
+  };
+
+  const handleGithubClick = () => {
+    if (project.github) {
+      window.open(project.github, '_blank');
+    }
   };
 
   return (
@@ -120,14 +128,26 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
         )}
 
         <div className="flex gap-2 mt-4">
-          <Button size="sm" variant="outline" className="flex-1 border-orange-500/50 text-orange-400 hover:bg-orange-500/10 text-xs">
-            <Github className="w-3 h-3 mr-1" />
-            Code
+          {project.github ? (
+            <Button 
+              size="sm" 
+              variant="outline" 
+              className="flex-1 border-orange-500/50 text-orange-400 hover:bg-orange-500/10 text-xs"
+              onClick={handleGithubClick}
+            >
+              <Github className="w-3 h-3 mr-1" />
+              Code
+            </Button>
+          ) : (
+            <Button size="sm" disabled className="flex-1 bg-gray-600/20 text-gray-500 cursor-not-allowed border border-gray-600/30 text-xs opacity-50">
+              <Github className="w-3 h-3 mr-1" />
+              Code
+            </Button>
+          )}
+          <Button size="sm" disabled className="flex-1 bg-gray-600/20 text-gray-500 cursor-not-allowed border border-gray-600/30 text-xs opacity-50">
+            <ExternalLink className="w-3 h-3 mr-1" />
+            Demo
           </Button>
-              <Button size="sm" disabled className="flex-1 bg-gray-600/20 text-gray-500 cursor-not-allowed border border-gray-600/30 text-xs opacity-50">
-                <ExternalLink className="w-3 h-3 mr-1" />
-                Demo
-              </Button>
         </div>
       </CardContent>
     </Card>

@@ -10,49 +10,54 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Justice AI - Legal Intelligence Platform",
+      title: "Legal AI Assistant - Legal Intelligence Platform",
       description: "Engineered advanced AI models including InlegalBERT, T5, Gemma, and LLama specifically trained on Indian legal corpus. Developed comprehensive legal tech solutions featuring document summarization, interactive legal consultation, clause classification, and automated contract generation capabilities.",
       image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=400&fit=crop",
       tags: ["Natural Language Processing", "Transformers", "Legal Technology", "Machine Learning", "Python", "TensorFlow"],
       category: "AI/ML",
       status: "Featured",
-      duration: "6 months"
+      duration: "6 months",
+      github: "https://github.com/topspeed69/Legal-AI-Assistant"
     },
     {
-      title: "Autonomous Vehicle Navigation System",
+      title: "Self Driving Car Prototype - Navigation System",
       description: "Developed a sophisticated monocular vision-based autonomous navigation system without traditional distance sensors. Implemented real-time computer vision algorithms using OpenCV and deep neural networks for object detection, path planning, and obstacle avoidance on Raspberry Pi 4 hardware.",
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop",
       tags: ["Computer Vision", "Deep Learning", "Embedded Systems", "Real-time Processing", "OpenCV", "Python"],
       category: "AI/ML",
       status: "Production",
-      duration: "4 months"
+      duration: "4 months",
+      github: null
     },
     {
-      title: "Enterprise Version Control System",
+      title: "Lightweight VCS - Version Control System",
       description: "Architected and implemented a high-performance version control system featuring advanced Huffman compression algorithms, lazy loading mechanisms, and chunked file hashing for optimal storage efficiency. Integrated comprehensive file integrity verification and distributed repository management.",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop",
       tags: ["Systems Programming", "Data Compression", "Distributed Systems", "C++", "CMake"],
       category: "Systems",
       status: "Completed",
-      duration: "3 months"
+      duration: "3 months",
+      github: "https://github.com/topspeed69/VCS"
     },
     {
-      title: "Social Media Management Dashboard",
+      title: "Social Media Admin Dashboard - Management Platform",
       description: "Designed and developed a comprehensive administrative dashboard for social media platform management. Built with scalable architecture supporting full CRUD operations, role-based access control, analytics integration, and real-time user management capabilities using modern web technologies.",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop",
       tags: ["Database Design", "API Development", "Authentication", "TypeScript", "MySQL", "Prisma ORM"],
       category: "Web Dev",
       status: "Active",
-      duration: "5 months"
+      duration: "5 months",
+      github: "https://github.com/topspeed69/Social-Media-Admin-Dashboard"
     },
     {
-      title: "IoT Environmental Monitoring System",
+      title: "Home Monitoring System - Environmental System",
       description: "Engineered a comprehensive IoT-based environmental monitoring solution for real-time detection of hazardous gases (butane, CO, CO2, O2), temperature, and humidity. Implemented automated alert systems, cloud data synchronization, and mobile notifications for safety-critical applications.",
       image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=400&fit=crop",
       tags: ["Internet of Things", "Sensor Integration", "Safety Systems", "Arduino", "ESP32", "Embedded C"],
       category: "Hardware",
       status: "Deployed",
-      duration: "2 months"
+      duration: "2 months",
+      github: null
     },
     {
       title: "Machine Learning Operations Pipeline",
@@ -61,7 +66,8 @@ const Projects = () => {
       tags: ["MLOps", "Cloud Computing", "DevOps", "Model Deployment", "Docker", "Python"],
       category: "AI/ML",
       status: "Production",
-      duration: "4 months"
+      duration: "4 months",
+      github: null
     }
   ];
 
@@ -72,6 +78,12 @@ const Projects = () => {
       case "Active": return "bg-gradient-to-r from-blue-500 to-cyan-500";
       case "Deployed": return "bg-gradient-to-r from-purple-500 to-pink-500";
       default: return "bg-gradient-to-r from-gray-500 to-gray-600";
+    }
+  };
+
+  const handleGithubClick = (github: string | null) => {
+    if (github) {
+      window.open(github, '_blank');
     }
   };
 
@@ -170,19 +182,32 @@ const Projects = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3 pt-2">
+                  {project.github ? (
+                    <Button 
+                      size="sm" 
+                      variant="outline" 
+                      className="flex-1 border-orange-500/50 text-orange-400 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all duration-300 group/btn"
+                      onClick={() => handleGithubClick(project.github)}
+                    >
+                      <Github className="h-3 w-3 mr-2 group-hover/btn:rotate-12 transition-transform duration-300" />
+                      <span className="font-normal text-xs">View Code</span>
+                    </Button>
+                  ) : (
+                    <Button 
+                      size="sm" 
+                      disabled
+                      className="flex-1 bg-gray-600/50 text-gray-400 cursor-not-allowed font-normal text-xs opacity-50"
+                    >
+                      <Github className="h-3 w-3 mr-2" />
+                      <span className="font-normal text-xs">View Code</span>
+                    </Button>
+                  )}
                   <Button 
                     size="sm" 
-                    variant="outline" 
-                    className="flex-1 border-orange-500/50 text-orange-400 hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all duration-300 group/btn"
+                    disabled
+                    className="flex-1 bg-gray-600/50 text-gray-400 cursor-not-allowed font-normal text-xs opacity-50"
                   >
-                    <Github className="h-3 w-3 mr-2 group-hover/btn:rotate-12 transition-transform duration-300" />
-                    <span className="font-normal text-xs">View Code</span>
-                  </Button>
-                  <Button 
-                    size="sm" 
-                    className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-0 transition-all duration-300 group/btn shadow-lg shadow-orange-500/25"
-                  >
-                    <ExternalLink className="h-3 w-3 mr-2 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-300" />
+                    <ExternalLink className="h-3 w-3 mr-2" />
                     <span className="font-normal text-xs">Live Demo</span>
                   </Button>
                 </div>
