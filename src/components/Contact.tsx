@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Mail, Github, MapPin, Phone } from "lucide-react";
 
@@ -80,13 +79,21 @@ const Contact = () => {
             <h3 className="text-2xl font-semibold text-white mb-6">
               Send Message
             </h3>
-            <form className="space-y-6">
+            <form 
+              className="space-y-6"
+              action="https://api.web3forms.com/submit"
+              method="POST"
+            >
+              {/* Web3Forms API Key */}
+              <input type="hidden" name="access_key" value={import.meta.env.VITE_WEB3FORMS_API_KEY} />
               <div>
                 <label className="block text-gray-300 text-sm font-light mb-2">
                   Your Name
                 </label>
                 <input
                   type="text"
+                  name="name"
+                  required
                   className="w-full px-4 py-3 backdrop-blur-sm bg-gray-800/20 border border-gray-700/30 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-all duration-300 hover:bg-gray-800/30 focus:shadow-lg focus:shadow-orange-500/20"
                   placeholder="Enter your name"
                 />
@@ -97,6 +104,8 @@ const Contact = () => {
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  required
                   className="w-full px-4 py-3 backdrop-blur-sm bg-gray-800/20 border border-gray-700/30 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-all duration-300 hover:bg-gray-800/30 focus:shadow-lg focus:shadow-orange-500/20"
                   placeholder="Enter your email"
                 />
@@ -107,11 +116,13 @@ const Contact = () => {
                 </label>
                 <textarea
                   rows={4}
+                  name="message"
+                  required
                   className="w-full px-4 py-3 backdrop-blur-sm bg-gray-800/20 border border-gray-700/30 rounded-lg text-white placeholder-gray-400 focus:border-orange-500 focus:outline-none transition-all duration-300 resize-none hover:bg-gray-800/30 focus:shadow-lg focus:shadow-orange-500/20"
                   placeholder="Your message..."
                 />
               </div>
-              <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 font-normal transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/40 transform hover:scale-105">
+              <Button type="submit" className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 font-normal transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/40 transform hover:scale-105">
                 <Mail className="mr-2 h-5 w-5" />
                 Send Message
               </Button>

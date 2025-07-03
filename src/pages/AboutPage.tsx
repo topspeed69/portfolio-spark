@@ -49,9 +49,8 @@ const AboutPage = () => {
   ];
 
   const interests = [
-    "Artificial Intelligence", "Machine Learning", "Computer Vision", "Natural Language Processing",
-    "Embedded Systems", "IoT Development", "Web Development", "Database Design",
-    "Algorithm Optimization", "Open Source", "Tech Innovation", "Problem Solving"
+    "Artificial Intelligence","Robotics", "Database Design",
+    "Photography","Trekking","Home Labs"
   ];
 
   return (
@@ -162,19 +161,19 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Interests & Passion */}
+      {/* Interests */}
       <section className="py-20 relative z-10">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-orange-500/10 backdrop-blur-sm border border-orange-500/20 rounded-full px-4 py-2 mb-6">
               <Zap className="w-4 h-4 text-orange-400" />
-              <span className="text-orange-400 font-medium">Passions</span>
+              <span className="text-orange-400 font-medium">Interests</span>
             </div>
             <h2 className="text-4xl font-light text-white mb-4">
               What Drives <span className="text-orange-400">Me</span>
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto font-light">
-              Technology is not just my profession—it's my passion. Here are the areas that fascinate me the most.
+              These are the corners of tech I’ve been dabbling in—testing, learning, and evolving along the way..
             </p>
           </div>
 
