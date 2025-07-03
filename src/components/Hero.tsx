@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -8,6 +7,10 @@ const Hero = () => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  // Get CV download URL from env and log for debugging
+  const cvUrl = import.meta.env.VITE_CV_DOWNLOAD_URL as string | undefined;
+  console.log("CV Download URL:", cvUrl);
 
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">

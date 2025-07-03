@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -45,9 +44,15 @@ const Navigation = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 text-sm font-normal">
-              Download CV
-            </Button>
+            <a
+              href={import.meta.env.VITE_CV_DOWNLOAD_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 text-sm font-normal">
+                Download CV
+              </Button>
+            </a>
           </div>
 
           <div className="md:hidden">
@@ -75,9 +80,15 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white w-full font-normal">
-                Download CV
-              </Button>
+              <a
+                href={import.meta.env.VITE_CV_DOWNLOAD_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="bg-orange-500 hover:bg-orange-600 text-white w-full font-normal">
+                  Download CV
+                </Button>
+              </a>
             </div>
           </div>
         )}
