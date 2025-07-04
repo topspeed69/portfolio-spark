@@ -19,13 +19,13 @@ const Contact = () => {
       icon: MapPin,
       label: "Location",
       value: "Latur, Maharashtra",
-      href: "#"
+      href: "https://maps.app.goo.gl/fjKmMPQ5d8ribAdp8"
     },
     {
       icon: Github,
       label: "GitHub",
-      value: "VinayMendole",
-      href: "https://github.com/VinayMendole"
+      value: "topspeed69",
+      href: "https://github.com/topspeed69"
     }
   ];
 
