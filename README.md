@@ -1,73 +1,125 @@
-# Welcome to your Lovable project
 
-## Project info
+# Portfolio Spark
 
-**URL**: https://lovable.dev/projects/834a88fe-42ff-4c38-b627-8cb5dcd4bf6f
+Portfolio Spark is a modern, production-grade frontend portfolio web application designed for industry professionals to showcase their skills, experience, and projects. Built with a focus on performance, scalability, accessibility, and maintainability, this project demonstrates best practices in frontend engineering and UI/UX design.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## Table of Contents
 
-**Use Lovable**
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Available Scripts](#available-scripts)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/834a88fe-42ff-4c38-b627-8cb5dcd4bf6f) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## Overview
 
-**Use your preferred IDE**
+Portfolio Spark is crafted to serve as a professional digital presence for developers, designers, and industry experts. It is fully responsive, SEO-optimized, and easily customizable for any personal or corporate branding needs. The project leverages a component-driven architecture and modern tooling to ensure a seamless developer and user experience.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Features
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- ⚡️ **Blazing Fast**: Powered by Vite and React for instant load times and smooth navigation.
+- 🎨 **Customizable UI**: Built with Tailwind CSS and shadcn/ui for rapid, themeable design.
+- 📱 **Responsive Design**: Mobile-first, works perfectly on all devices.
+- 🧩 **Component-Based**: Modular, reusable, and scalable codebase.
+- 🛡️ **Type-Safe**: Written in TypeScript for robust, maintainable code.
+- 🌐 **SEO Optimized**: Semantic HTML and best practices for discoverability.
+- 🧑‍💼 **Professional Sections**: Hero, About, Skills, Experience, Projects, Contact, and more.
+- 🧪 **Ready for Integration**: Easily connect to headless CMS, analytics, or deployment platforms.
 
-Follow these steps:
+## Tech Stack
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **Framework:** React (TypeScript)
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS, shadcn/ui
+- **State Management:** React Context & Hooks
+- **Testing:** (Add your preferred testing tools here)
+- **CI/CD:** (Add your CI/CD tools or workflows here)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Project Structure
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+  components/      # Reusable UI components
+  data/            # Static data (e.g., projects, skills)
+  hooks/           # Custom React hooks
+  lib/             # Utility functions
+  pages/           # Page-level components
+  App.tsx          # Main app component
+  main.tsx         # Entry point
+public/            # Static assets
 ```
 
-**Edit a file directly in GitHub**
+## Getting Started
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Prerequisites
 
-**Use GitHub Codespaces**
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Installation
 
-## What technologies are used for this project?
+Clone the repository and install dependencies:
 
-This project is built with:
+```sh
+git clone <YOUR_GIT_URL>
+cd portfolio-spark
+npm install
+# or
+yarn install
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Development
 
-## How can I deploy this project?
+Start the local development server:
 
-Simply open [Lovable](https://lovable.dev/projects/834a88fe-42ff-4c38-b627-8cb5dcd4bf6f) and click on Share -> Publish.
+```sh
+npm run dev
+# or
+yarn dev
+```
 
-## Can I connect a custom domain to my Lovable project?
+Visit [http://localhost:5173](http://localhost:5173) to view the app.
 
-Yes, you can!
+## Available Scripts
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- `npm run dev` — Start the development server
+- `npm run build` — Build for production
+- `npm run preview` — Preview the production build
+- `npm run lint` — Lint the codebase
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Deployment
+
+Portfolio Spark can be deployed to any static hosting provider (Vercel, Netlify, GitHub Pages, etc.).
+
+To create a production build:
+
+```sh
+npm run build
+```
+
+The output will be in the `dist/` directory. Deploy this folder to your preferred hosting platform.
+
+## Contributing
+
+Contributions are welcome! Please open issues or submit pull requests for improvements, bug fixes, or new features.
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+## Acknowledgements
+
+- UI inspiration and some initial setup were supported by [Lovable](https://lovable.dev/), which accelerated the early development process.
+
+---
+
+_Crafted with care to help professionals shine online._
