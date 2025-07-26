@@ -126,10 +126,33 @@ const Works = () => {
                   ))}
                 </div>
                 <div className="flex gap-3">
-                  <Button size="sm" variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-normal text-xs transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25">
-                    <Github className="h-3 w-3 mr-1" />
-                    Code
-                  </Button>
+                  {project.github ? (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      tabIndex={0}
+                    >
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-normal text-xs transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25"
+                      >
+                        <Github className="h-3 w-3 mr-1" />
+                        Code
+                      </Button>
+                    </a>
+                  ) : (
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      disabled
+                      className="border-gray-700 text-gray-400 cursor-not-allowed font-normal text-xs opacity-50"
+                    >
+                      <Github className="h-3 w-3 mr-1" />
+                      Code
+                    </Button>
+                  )}
                   <Button size="sm" disabled className="bg-gray-600/50 text-gray-400 cursor-not-allowed font-normal text-xs opacity-50">
                     <ExternalLink className="h-3 w-3 mr-1" />
                     Live
