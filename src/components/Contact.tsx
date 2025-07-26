@@ -29,6 +29,38 @@ const Contact = () => {
     }
   ];
 
+
+  // Web3Forms handler for Vercel/static hosting compatibility
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.target as HTMLFormElement;
+    const formData = new FormData(form);
+    formData.append("access_key", import.meta.env.VITE_WEB3FORMS_API_KEY);
+
+    const object = Object.fromEntries(formData.entries());
+    const json = JSON.stringify(object);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: json
+      });
+      const result = await response.json();
+      if (result.success) {
+        form.reset();
+        alert("Message sent successfully!");
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      alert("An error occurred. Please try again later.");
+    }
+  };
+
   return (
     <section className="py-24 backdrop-blur-md bg-black/30 border-t border-gray-800/30 relative overflow-hidden">
       {/* Enhanced Background Animation with Orange Theme */}
@@ -81,11 +113,8 @@ const Contact = () => {
             </h3>
             <form 
               className="space-y-6"
-              action="https://api.web3forms.com/submit"
-              method="POST"
+              onSubmit={handleSubmit}
             >
-              {/* Web3Forms API Key */}
-              <input type="hidden" name="access_key" value={import.meta.env.VITE_WEB3FORMS_API_KEY} />
               <div>
                 <label className="block text-gray-300 text-sm font-light mb-2">
                   Your Name
